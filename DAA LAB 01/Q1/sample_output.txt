@@ -1,0 +1,16 @@
+Increasing order of growth for sufficiently large n:
+
+ 1. 1/n
+ 2. log2 n
+ 3. 12 sqrt(n)
+ 4. 50n^0.5
+ 5. n^0.51
+ 6. n log2 n
+ 7. 2^32 n
+ 8. n^2 - 324
+ 9. 100n^2 + 6n
+10. 2n^3
+11. n^(log2 n)
+12. 3^n
+
+Generated q1_growth_data.csv and q1_growth_order.csv
