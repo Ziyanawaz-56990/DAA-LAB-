@@ -1,0 +1,10 @@
+n=10 -> duplicate found, comparisons=28
+n=25 -> duplicate found, comparisons=141
+n=50 -> duplicate found, comparisons=39
+n=100 -> duplicate found, comparisons=207
+n=200 -> duplicate found, comparisons=1135
+n=400 -> duplicate found, comparisons=290
+n=600 -> duplicate found, comparisons=2398
+n=800 -> duplicate found, comparisons=8194
+n=1000 -> duplicate found, comparisons=1830
+CSV written to q6_element_uniqueness.csv

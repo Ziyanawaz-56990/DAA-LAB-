@@ -1,0 +1,10 @@
+n,comparisons,result,worst_case_comparisons
+10,28,duplicate_found,45
+25,141,duplicate_found,300
+50,39,duplicate_found,1225
+100,207,duplicate_found,4950
+200,1135,duplicate_found,19900
+400,290,duplicate_found,79800
+600,2398,duplicate_found,179700
+800,8194,duplicate_found,319600
+1000,1830,duplicate_found,499500
