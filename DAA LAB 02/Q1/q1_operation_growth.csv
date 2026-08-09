@@ -1,0 +1,379 @@
+n,structure,operation,worst_case_count
+10,"Unsorted Array","Search",10
+10,"Unsorted Array","Insert",1
+10,"Unsorted Array","Delete",9
+10,"Unsorted Array","Maximum",9
+10,"Unsorted Array","Minimum",9
+10,"Unsorted Array","Predecessor",10
+10,"Unsorted Array","Successor",10
+10,"Sorted Array","Search",3
+10,"Sorted Array","Insert",11
+10,"Sorted Array","Delete",9
+10,"Sorted Array","Maximum",1
+10,"Sorted Array","Minimum",1
+10,"Sorted Array","Predecessor",1
+10,"Sorted Array","Successor",1
+10,"Singly Linked Unsorted","Search",10
+10,"Singly Linked Unsorted","Insert",1
+10,"Singly Linked Unsorted","Delete",9
+10,"Singly Linked Unsorted","Maximum",9
+10,"Singly Linked Unsorted","Minimum",9
+10,"Singly Linked Unsorted","Predecessor",10
+10,"Singly Linked Unsorted","Successor",10
+10,"Singly Linked Sorted","Search",10
+10,"Singly Linked Sorted","Insert",10
+10,"Singly Linked Sorted","Delete",9
+10,"Singly Linked Sorted","Maximum",9
+10,"Singly Linked Sorted","Minimum",1
+10,"Singly Linked Sorted","Predecessor",9
+10,"Singly Linked Sorted","Successor",1
+10,"Doubly Linked Unsorted","Search",10
+10,"Doubly Linked Unsorted","Insert",1
+10,"Doubly Linked Unsorted","Delete",1
+10,"Doubly Linked Unsorted","Maximum",9
+10,"Doubly Linked Unsorted","Minimum",9
+10,"Doubly Linked Unsorted","Predecessor",10
+10,"Doubly Linked Unsorted","Successor",10
+10,"Doubly Linked Sorted","Search",10
+10,"Doubly Linked Sorted","Insert",11
+10,"Doubly Linked Sorted","Delete",1
+10,"Doubly Linked Sorted","Maximum",1
+10,"Doubly Linked Sorted","Minimum",1
+10,"Doubly Linked Sorted","Predecessor",1
+10,"Doubly Linked Sorted","Successor",1
+20,"Unsorted Array","Search",20
+20,"Unsorted Array","Insert",1
+20,"Unsorted Array","Delete",19
+20,"Unsorted Array","Maximum",19
+20,"Unsorted Array","Minimum",19
+20,"Unsorted Array","Predecessor",20
+20,"Unsorted Array","Successor",20
+20,"Sorted Array","Search",4
+20,"Sorted Array","Insert",21
+20,"Sorted Array","Delete",19
+20,"Sorted Array","Maximum",1
+20,"Sorted Array","Minimum",1
+20,"Sorted Array","Predecessor",1
+20,"Sorted Array","Successor",1
+20,"Singly Linked Unsorted","Search",20
+20,"Singly Linked Unsorted","Insert",1
+20,"Singly Linked Unsorted","Delete",19
+20,"Singly Linked Unsorted","Maximum",19
+20,"Singly Linked Unsorted","Minimum",19
+20,"Singly Linked Unsorted","Predecessor",20
+20,"Singly Linked Unsorted","Successor",20
+20,"Singly Linked Sorted","Search",20
+20,"Singly Linked Sorted","Insert",20
+20,"Singly Linked Sorted","Delete",19
+20,"Singly Linked Sorted","Maximum",19
+20,"Singly Linked Sorted","Minimum",1
+20,"Singly Linked Sorted","Predecessor",19
+20,"Singly Linked Sorted","Successor",1
+20,"Doubly Linked Unsorted","Search",20
+20,"Doubly Linked Unsorted","Insert",1
+20,"Doubly Linked Unsorted","Delete",1
+20,"Doubly Linked Unsorted","Maximum",19
+20,"Doubly Linked Unsorted","Minimum",19
+20,"Doubly Linked Unsorted","Predecessor",20
+20,"Doubly Linked Unsorted","Successor",20
+20,"Doubly Linked Sorted","Search",20
+20,"Doubly Linked Sorted","Insert",21
+20,"Doubly Linked Sorted","Delete",1
+20,"Doubly Linked Sorted","Maximum",1
+20,"Doubly Linked Sorted","Minimum",1
+20,"Doubly Linked Sorted","Predecessor",1
+20,"Doubly Linked Sorted","Successor",1
+50,"Unsorted Array","Search",50
+50,"Unsorted Array","Insert",1
+50,"Unsorted Array","Delete",49
+50,"Unsorted Array","Maximum",49
+50,"Unsorted Array","Minimum",49
+50,"Unsorted Array","Predecessor",50
+50,"Unsorted Array","Successor",50
+50,"Sorted Array","Search",5
+50,"Sorted Array","Insert",51
+50,"Sorted Array","Delete",49
+50,"Sorted Array","Maximum",1
+50,"Sorted Array","Minimum",1
+50,"Sorted Array","Predecessor",1
+50,"Sorted Array","Successor",1
+50,"Singly Linked Unsorted","Search",50
+50,"Singly Linked Unsorted","Insert",1
+50,"Singly Linked Unsorted","Delete",49
+50,"Singly Linked Unsorted","Maximum",49
+50,"Singly Linked Unsorted","Minimum",49
+50,"Singly Linked Unsorted","Predecessor",50
+50,"Singly Linked Unsorted","Successor",50
+50,"Singly Linked Sorted","Search",50
+50,"Singly Linked Sorted","Insert",50
+50,"Singly Linked Sorted","Delete",49
+50,"Singly Linked Sorted","Maximum",49
+50,"Singly Linked Sorted","Minimum",1
+50,"Singly Linked Sorted","Predecessor",49
+50,"Singly Linked Sorted","Successor",1
+50,"Doubly Linked Unsorted","Search",50
+50,"Doubly Linked Unsorted","Insert",1
+50,"Doubly Linked Unsorted","Delete",1
+50,"Doubly Linked Unsorted","Maximum",49
+50,"Doubly Linked Unsorted","Minimum",49
+50,"Doubly Linked Unsorted","Predecessor",50
+50,"Doubly Linked Unsorted","Successor",50
+50,"Doubly Linked Sorted","Search",50
+50,"Doubly Linked Sorted","Insert",51
+50,"Doubly Linked Sorted","Delete",1
+50,"Doubly Linked Sorted","Maximum",1
+50,"Doubly Linked Sorted","Minimum",1
+50,"Doubly Linked Sorted","Predecessor",1
+50,"Doubly Linked Sorted","Successor",1
+100,"Unsorted Array","Search",100
+100,"Unsorted Array","Insert",1
+100,"Unsorted Array","Delete",99
+100,"Unsorted Array","Maximum",99
+100,"Unsorted Array","Minimum",99
+100,"Unsorted Array","Predecessor",100
+100,"Unsorted Array","Successor",100
+100,"Sorted Array","Search",6
+100,"Sorted Array","Insert",101
+100,"Sorted Array","Delete",99
+100,"Sorted Array","Maximum",1
+100,"Sorted Array","Minimum",1
+100,"Sorted Array","Predecessor",1
+100,"Sorted Array","Successor",1
+100,"Singly Linked Unsorted","Search",100
+100,"Singly Linked Unsorted","Insert",1
+100,"Singly Linked Unsorted","Delete",99
+100,"Singly Linked Unsorted","Maximum",99
+100,"Singly Linked Unsorted","Minimum",99
+100,"Singly Linked Unsorted","Predecessor",100
+100,"Singly Linked Unsorted","Successor",100
+100,"Singly Linked Sorted","Search",100
+100,"Singly Linked Sorted","Insert",100
+100,"Singly Linked Sorted","Delete",99
+100,"Singly Linked Sorted","Maximum",99
+100,"Singly Linked Sorted","Minimum",1
+100,"Singly Linked Sorted","Predecessor",99
+100,"Singly Linked Sorted","Successor",1
+100,"Doubly Linked Unsorted","Search",100
+100,"Doubly Linked Unsorted","Insert",1
+100,"Doubly Linked Unsorted","Delete",1
+100,"Doubly Linked Unsorted","Maximum",99
+100,"Doubly Linked Unsorted","Minimum",99
+100,"Doubly Linked Unsorted","Predecessor",100
+100,"Doubly Linked Unsorted","Successor",100
+100,"Doubly Linked Sorted","Search",100
+100,"Doubly Linked Sorted","Insert",101
+100,"Doubly Linked Sorted","Delete",1
+100,"Doubly Linked Sorted","Maximum",1
+100,"Doubly Linked Sorted","Minimum",1
+100,"Doubly Linked Sorted","Predecessor",1
+100,"Doubly Linked Sorted","Successor",1
+200,"Unsorted Array","Search",200
+200,"Unsorted Array","Insert",1
+200,"Unsorted Array","Delete",199
+200,"Unsorted Array","Maximum",199
+200,"Unsorted Array","Minimum",199
+200,"Unsorted Array","Predecessor",200
+200,"Unsorted Array","Successor",200
+200,"Sorted Array","Search",7
+200,"Sorted Array","Insert",201
+200,"Sorted Array","Delete",199
+200,"Sorted Array","Maximum",1
+200,"Sorted Array","Minimum",1
+200,"Sorted Array","Predecessor",1
+200,"Sorted Array","Successor",1
+200,"Singly Linked Unsorted","Search",200
+200,"Singly Linked Unsorted","Insert",1
+200,"Singly Linked Unsorted","Delete",199
+200,"Singly Linked Unsorted","Maximum",199
+200,"Singly Linked Unsorted","Minimum",199
+200,"Singly Linked Unsorted","Predecessor",200
+200,"Singly Linked Unsorted","Successor",200
+200,"Singly Linked Sorted","Search",200
+200,"Singly Linked Sorted","Insert",200
+200,"Singly Linked Sorted","Delete",199
+200,"Singly Linked Sorted","Maximum",199
+200,"Singly Linked Sorted","Minimum",1
+200,"Singly Linked Sorted","Predecessor",199
+200,"Singly Linked Sorted","Successor",1
+200,"Doubly Linked Unsorted","Search",200
+200,"Doubly Linked Unsorted","Insert",1
+200,"Doubly Linked Unsorted","Delete",1
+200,"Doubly Linked Unsorted","Maximum",199
+200,"Doubly Linked Unsorted","Minimum",199
+200,"Doubly Linked Unsorted","Predecessor",200
+200,"Doubly Linked Unsorted","Successor",200
+200,"Doubly Linked Sorted","Search",200
+200,"Doubly Linked Sorted","Insert",201
+200,"Doubly Linked Sorted","Delete",1
+200,"Doubly Linked Sorted","Maximum",1
+200,"Doubly Linked Sorted","Minimum",1
+200,"Doubly Linked Sorted","Predecessor",1
+200,"Doubly Linked Sorted","Successor",1
+500,"Unsorted Array","Search",500
+500,"Unsorted Array","Insert",1
+500,"Unsorted Array","Delete",499
+500,"Unsorted Array","Maximum",499
+500,"Unsorted Array","Minimum",499
+500,"Unsorted Array","Predecessor",500
+500,"Unsorted Array","Successor",500
+500,"Sorted Array","Search",8
+500,"Sorted Array","Insert",501
+500,"Sorted Array","Delete",499
+500,"Sorted Array","Maximum",1
+500,"Sorted Array","Minimum",1
+500,"Sorted Array","Predecessor",1
+500,"Sorted Array","Successor",1
+500,"Singly Linked Unsorted","Search",500
+500,"Singly Linked Unsorted","Insert",1
+500,"Singly Linked Unsorted","Delete",499
+500,"Singly Linked Unsorted","Maximum",499
+500,"Singly Linked Unsorted","Minimum",499
+500,"Singly Linked Unsorted","Predecessor",500
+500,"Singly Linked Unsorted","Successor",500
+500,"Singly Linked Sorted","Search",500
+500,"Singly Linked Sorted","Insert",500
+500,"Singly Linked Sorted","Delete",499
+500,"Singly Linked Sorted","Maximum",499
+500,"Singly Linked Sorted","Minimum",1
+500,"Singly Linked Sorted","Predecessor",499
+500,"Singly Linked Sorted","Successor",1
+500,"Doubly Linked Unsorted","Search",500
+500,"Doubly Linked Unsorted","Insert",1
+500,"Doubly Linked Unsorted","Delete",1
+500,"Doubly Linked Unsorted","Maximum",499
+500,"Doubly Linked Unsorted","Minimum",499
+500,"Doubly Linked Unsorted","Predecessor",500
+500,"Doubly Linked Unsorted","Successor",500
+500,"Doubly Linked Sorted","Search",500
+500,"Doubly Linked Sorted","Insert",501
+500,"Doubly Linked Sorted","Delete",1
+500,"Doubly Linked Sorted","Maximum",1
+500,"Doubly Linked Sorted","Minimum",1
+500,"Doubly Linked Sorted","Predecessor",1
+500,"Doubly Linked Sorted","Successor",1
+1000,"Unsorted Array","Search",1000
+1000,"Unsorted Array","Insert",1
+1000,"Unsorted Array","Delete",999
+1000,"Unsorted Array","Maximum",999
+1000,"Unsorted Array","Minimum",999
+1000,"Unsorted Array","Predecessor",1000
+1000,"Unsorted Array","Successor",1000
+1000,"Sorted Array","Search",9
+1000,"Sorted Array","Insert",1001
+1000,"Sorted Array","Delete",999
+1000,"Sorted Array","Maximum",1
+1000,"Sorted Array","Minimum",1
+1000,"Sorted Array","Predecessor",1
+1000,"Sorted Array","Successor",1
+1000,"Singly Linked Unsorted","Search",1000
+1000,"Singly Linked Unsorted","Insert",1
+1000,"Singly Linked Unsorted","Delete",999
+1000,"Singly Linked Unsorted","Maximum",999
+1000,"Singly Linked Unsorted","Minimum",999
+1000,"Singly Linked Unsorted","Predecessor",1000
+1000,"Singly Linked Unsorted","Successor",1000
+1000,"Singly Linked Sorted","Search",1000
+1000,"Singly Linked Sorted","Insert",1000
+1000,"Singly Linked Sorted","Delete",999
+1000,"Singly Linked Sorted","Maximum",999
+1000,"Singly Linked Sorted","Minimum",1
+1000,"Singly Linked Sorted","Predecessor",999
+1000,"Singly Linked Sorted","Successor",1
+1000,"Doubly Linked Unsorted","Search",1000
+1000,"Doubly Linked Unsorted","Insert",1
+1000,"Doubly Linked Unsorted","Delete",1
+1000,"Doubly Linked Unsorted","Maximum",999
+1000,"Doubly Linked Unsorted","Minimum",999
+1000,"Doubly Linked Unsorted","Predecessor",1000
+1000,"Doubly Linked Unsorted","Successor",1000
+1000,"Doubly Linked Sorted","Search",1000
+1000,"Doubly Linked Sorted","Insert",1001
+1000,"Doubly Linked Sorted","Delete",1
+1000,"Doubly Linked Sorted","Maximum",1
+1000,"Doubly Linked Sorted","Minimum",1
+1000,"Doubly Linked Sorted","Predecessor",1
+1000,"Doubly Linked Sorted","Successor",1
+2000,"Unsorted Array","Search",2000
+2000,"Unsorted Array","Insert",1
+2000,"Unsorted Array","Delete",1999
+2000,"Unsorted Array","Maximum",1999
+2000,"Unsorted Array","Minimum",1999
+2000,"Unsorted Array","Predecessor",2000
+2000,"Unsorted Array","Successor",2000
+2000,"Sorted Array","Search",10
+2000,"Sorted Array","Insert",2001
+2000,"Sorted Array","Delete",1999
+2000,"Sorted Array","Maximum",1
+2000,"Sorted Array","Minimum",1
+2000,"Sorted Array","Predecessor",1
+2000,"Sorted Array","Successor",1
+2000,"Singly Linked Unsorted","Search",2000
+2000,"Singly Linked Unsorted","Insert",1
+2000,"Singly Linked Unsorted","Delete",1999
+2000,"Singly Linked Unsorted","Maximum",1999
+2000,"Singly Linked Unsorted","Minimum",1999
+2000,"Singly Linked Unsorted","Predecessor",2000
+2000,"Singly Linked Unsorted","Successor",2000
+2000,"Singly Linked Sorted","Search",2000
+2000,"Singly Linked Sorted","Insert",2000
+2000,"Singly Linked Sorted","Delete",1999
+2000,"Singly Linked Sorted","Maximum",1999
+2000,"Singly Linked Sorted","Minimum",1
+2000,"Singly Linked Sorted","Predecessor",1999
+2000,"Singly Linked Sorted","Successor",1
+2000,"Doubly Linked Unsorted","Search",2000
+2000,"Doubly Linked Unsorted","Insert",1
+2000,"Doubly Linked Unsorted","Delete",1
+2000,"Doubly Linked Unsorted","Maximum",1999
+2000,"Doubly Linked Unsorted","Minimum",1999
+2000,"Doubly Linked Unsorted","Predecessor",2000
+2000,"Doubly Linked Unsorted","Successor",2000
+2000,"Doubly Linked Sorted","Search",2000
+2000,"Doubly Linked Sorted","Insert",2001
+2000,"Doubly Linked Sorted","Delete",1
+2000,"Doubly Linked Sorted","Maximum",1
+2000,"Doubly Linked Sorted","Minimum",1
+2000,"Doubly Linked Sorted","Predecessor",1
+2000,"Doubly Linked Sorted","Successor",1
+5000,"Unsorted Array","Search",5000
+5000,"Unsorted Array","Insert",1
+5000,"Unsorted Array","Delete",4999
+5000,"Unsorted Array","Maximum",4999
+5000,"Unsorted Array","Minimum",4999
+5000,"Unsorted Array","Predecessor",5000
+5000,"Unsorted Array","Successor",5000
+5000,"Sorted Array","Search",12
+5000,"Sorted Array","Insert",5001
+5000,"Sorted Array","Delete",4999
+5000,"Sorted Array","Maximum",1
+5000,"Sorted Array","Minimum",1
+5000,"Sorted Array","Predecessor",1
+5000,"Sorted Array","Successor",1
+5000,"Singly Linked Unsorted","Search",5000
+5000,"Singly Linked Unsorted","Insert",1
+5000,"Singly Linked Unsorted","Delete",4999
+5000,"Singly Linked Unsorted","Maximum",4999
+5000,"Singly Linked Unsorted","Minimum",4999
+5000,"Singly Linked Unsorted","Predecessor",5000
+5000,"Singly Linked Unsorted","Successor",5000
+5000,"Singly Linked Sorted","Search",5000
+5000,"Singly Linked Sorted","Insert",5000
+5000,"Singly Linked Sorted","Delete",4999
+5000,"Singly Linked Sorted","Maximum",4999
+5000,"Singly Linked Sorted","Minimum",1
+5000,"Singly Linked Sorted","Predecessor",4999
+5000,"Singly Linked Sorted","Successor",1
+5000,"Doubly Linked Unsorted","Search",5000
+5000,"Doubly Linked Unsorted","Insert",1
+5000,"Doubly Linked Unsorted","Delete",1
+5000,"Doubly Linked Unsorted","Maximum",4999
+5000,"Doubly Linked Unsorted","Minimum",4999
+5000,"Doubly Linked Unsorted","Predecessor",5000
+5000,"Doubly Linked Unsorted","Successor",5000
+5000,"Doubly Linked Sorted","Search",5000
+5000,"Doubly Linked Sorted","Insert",5001
+5000,"Doubly Linked Sorted","Delete",1
+5000,"Doubly Linked Sorted","Maximum",1
+5000,"Doubly Linked Sorted","Minimum",1
+5000,"Doubly Linked Sorted","Predecessor",1
+5000,"Doubly Linked Sorted","Successor",1

@@ -1,0 +1,7 @@
+structure,search,insert,delete,maximum,minimum,predecessor,successor
+"Unsorted Array",O(n),O(1),O(n),O(n),O(n),O(n),O(n)
+"Sorted Array",O(log n),O(n),O(n),O(1),O(1),O(1),O(1)
+"Singly Linked Unsorted",O(n),O(1),O(n),O(n),O(n),O(n),O(n)
+"Singly Linked Sorted",O(n),O(n),O(n),O(n),O(1),O(n),O(1)
+"Doubly Linked Unsorted",O(n),O(1),O(1),O(n),O(n),O(n),O(n)
+"Doubly Linked Sorted",O(n),O(n),O(1),O(1),O(1),O(1),O(1)
