@@ -642,17 +642,4 @@ IIIT Bhubaneswar
 
 ---
 
-> **Analyse the growth. Understand the trade-off. Verify the result.**
-
-```
-
-### Now do only this
-
-1. Go to your **DAA LAB** folder.
-2. Open the `README.md` you created there.
-3. **Ctrl + A**
-4. Paste **everything inside the code block above**.
-5. **Ctrl + S**.
-
-That's your **main repository README**.
-```
+> **Analyse the growth. Understand the trade-off. Verify the result.*
