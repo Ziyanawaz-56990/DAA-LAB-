@@ -1,0 +1,2 @@
+Fair coin convergence and fair-vs-biased comparison completed.
+Generated q2_fair_convergence.csv and q2_bias_comparison.csv
