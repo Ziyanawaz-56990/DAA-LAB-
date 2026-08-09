@@ -1,0 +1,4 @@
+Array: 0000011111  -> first 1 at index 5
+Array: 0000000111  -> first 1 at index 7
+Array: 11111  -> first 1 at index 0
+Array: 00000  -> no 1 found (all zeros)
