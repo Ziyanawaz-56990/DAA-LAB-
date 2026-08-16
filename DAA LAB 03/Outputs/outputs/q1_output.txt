@@ -1,0 +1,17 @@
+Array size n = 100000
+
+Target idx   Binary comps    Ternary comps     
+0            31              31                  (found at 0 / 0)
+25000        31              33                  (found at 25000 / 25000)
+50000        31              38                  (found at 50000 / 50000)
+75000        31              34                  (found at 75000 / 75000)
+99999        33              41                  (found at 99999 / 99999)
+
+Searching absent element:
+Binary: comparisons = 34, result = -1
+Ternary: comparisons = 44, result = -1
+
+Total comparisons over 5 found-trials: Binary = 157, Ternary = 177
+
+Worst-case comparison bound: Binary ~ 2*log2(n) = 33.22, Ternary ~ 4*log3(n) = 41.92
+=> Binary search used FEWER comparisons overall -> Binary search is better.

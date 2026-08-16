@@ -1,0 +1,43 @@
+Initial array: 29 10 14 37 13 
+
+Step-by-step (showing the invariant A[0..i-1] sorted before each pass):
+Before pass i=0, sorted prefix A[0..-1] = 
+  -> found min in A[0..4] at index 1, swapped with A[0]
+  -> array now: 10 29 14 37 13 
+
+Before pass i=1, sorted prefix A[0..0] = 10 
+  -> found min in A[1..4] at index 4, swapped with A[1]
+  -> array now: 10 13 14 37 29 
+
+Before pass i=2, sorted prefix A[0..1] = 10 13 
+  -> found min in A[2..4] at index 2, swapped with A[2]
+  -> array now: 10 13 14 37 29 
+
+Before pass i=3, sorted prefix A[0..2] = 10 13 14 
+  -> found min in A[3..4] at index 4, swapped with A[3]
+  -> array now: 10 13 14 29 37 
+
+After loop ends (i reached n-1=4), full array is sorted:
+10 13 14 29 37 
+
+--- Empirical validation ---
+n=10     Random input:     comparisons=45       swaps=6      sorted=yes
+n=10     Already sorted:   comparisons=45       swaps=0      sorted=yes
+n=10     Reverse sorted:   comparisons=45       swaps=5      sorted=yes
+            Expected comparisons n(n-1)/2 = 45  (same for ALL inputs -> confirms Theta(n^2) in both best & worst case)
+
+n=100    Random input:     comparisons=4950     swaps=94     sorted=yes
+n=100    Already sorted:   comparisons=4950     swaps=0      sorted=yes
+n=100    Reverse sorted:   comparisons=4950     swaps=50     sorted=yes
+            Expected comparisons n(n-1)/2 = 4950  (same for ALL inputs -> confirms Theta(n^2) in both best & worst case)
+
+n=1000   Random input:     comparisons=499500   swaps=996    sorted=yes
+n=1000   Already sorted:   comparisons=499500   swaps=0      sorted=yes
+n=1000   Reverse sorted:   comparisons=499500   swaps=500    sorted=yes
+            Expected comparisons n(n-1)/2 = 499500  (same for ALL inputs -> confirms Theta(n^2) in both best & worst case)
+
+n=5000   Random input:     comparisons=12497500 swaps=4991   sorted=yes
+n=5000   Already sorted:   comparisons=12497500 swaps=0      sorted=yes
+n=5000   Reverse sorted:   comparisons=12497500 swaps=2500   sorted=yes
+            Expected comparisons n(n-1)/2 = 12497500  (same for ALL inputs -> confirms Theta(n^2) in both best & worst case)
+

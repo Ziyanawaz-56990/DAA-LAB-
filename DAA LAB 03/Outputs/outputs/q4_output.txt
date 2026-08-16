@@ -1,0 +1,25 @@
+Matrix A:
+     1      2      3      4 
+     5      6      7      8 
+     9     10     11     12 
+    13     14     15     16 
+
+Matrix B:
+    16     15     14     13 
+    12     11     10      9 
+     8      7      6      5 
+     4      3      2      1 
+
+A x B (Strassen's method):
+    80     70     60     50 
+   240    214    188    162 
+   400    358    316    274 
+   560    502    444    386 
+
+A x B (naive method, for verification):
+    80     70     60     50 
+   240    214    188    162 
+   400    358    316    274 
+   560    502    444    386 
+
+Verification: MATCH - Strassen result equals naive result.

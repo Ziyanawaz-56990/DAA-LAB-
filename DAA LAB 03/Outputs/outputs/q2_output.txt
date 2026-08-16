@@ -1,0 +1,6 @@
+Test 1 - No defective coin (n=27): No defective coin found (all coins genuine). Weighings used = 4
+(Planted defective coin at index 12)
+Test 2 - One defective coin (n=27): Defective (lighter) coin is at index 12 (weight=9.00). Weighings used = 3
+Test 3 - Defective at index 73, n=100 (n=100): Defective (lighter) coin is at index 73 (weight=4.50). Weighings used = 4
+
+For n items the number of weighings grows as O(log3 n) which is <= floor(log2 n) + c for a small constant c.
