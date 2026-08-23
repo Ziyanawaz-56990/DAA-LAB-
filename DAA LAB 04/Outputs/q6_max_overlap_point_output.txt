@@ -1,0 +1,10 @@
+Q6 - Point in Max Intervals (O(n log n))
+================================================================
+Intervals S:
+  (10, 40)
+  (20, 60)
+  (50, 90)
+  (15, 70)
+
+Best point p                = 20
+Intervals containing p       = 3

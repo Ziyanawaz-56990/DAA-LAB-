@@ -1,0 +1,4 @@
+Q1 - Sort by Colour (O(n))
+================================================================
+Input  : (1,RED)  (3,YELLOW)  (5,BLUE)  (7,RED)  (9,YELLOW)  (11,BLUE)  (13,RED)  (15,YELLOW)
+Output : (1,RED)  (7,RED)  (13,RED)  (5,BLUE)  (11,BLUE)  (3,YELLOW)  (9,YELLOW)  (15,YELLOW)

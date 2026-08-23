@@ -1,0 +1,12 @@
+Q4 - Max Simultaneous Presence (O(n log n))
+================================================================
+Persons (entry, exit):
+  p1: (1, 8)
+  p2: (3, 10)
+  p3: (5, 22)
+  p4: (20, 40)
+  p5: (15, 30)
+  p6: (25, 33)
+
+Maximum simultaneous presence = 3
+First reached at time         = 5
