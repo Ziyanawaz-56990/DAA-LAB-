@@ -1,0 +1,5 @@
+Enter number of random elements (N): Generated 12 random numbers -> input.txt
+Unsorted data (read from input.txt):
+641 521 611 589 525 371 94 948 354 910 839 739 
+Sorted data (also written to output.txt):
+94 354 371 521 525 589 611 641 739 839 910 948 
