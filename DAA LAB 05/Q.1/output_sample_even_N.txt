@@ -1,0 +1,4 @@
+Enter number of elements (N): Enter 6 elements:
+
+Original list (unsorted, as entered): 10 2 7 4 9 1 
+Median = 5.50

@@ -1,0 +1,4 @@
+Enter number of elements (N): Enter 7 elements:
+
+Original list (unsorted, as entered): 12 4 5 9 1 8 3 
+Median = 5.00
