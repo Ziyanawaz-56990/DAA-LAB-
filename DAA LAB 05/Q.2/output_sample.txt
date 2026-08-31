@@ -1,0 +1,4 @@
+Enter number of elements (N): Enter 8 elements:
+Enter K (1-indexed, 1 <= K <= 8): 
+Original list (unsorted, as entered): 15 3 9 1 20 7 11 4 
+The 3rd smallest element is: 4
