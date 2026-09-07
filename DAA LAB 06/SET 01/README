@@ -1,1 +1,96 @@
+# DAA LAB-6 — Set 1: Dynamic Programming
+
+This folder contains complete, compiled-and-verified solutions to the four
+Dynamic Programming problems from the **"DAA LAB-6 : Dynamic Programming"**
+question sheet (see `questions.md` / `question_sheet.jpeg` for the original).
+
+## Folder Structure
+
+```
+Set1_DynamicProgramming/
+├── README.md                         <- this file
+├── questions.md                      <- transcribed questions + embedded image
+├── question_sheet.jpeg               <- original question sheet (image)
+├── all_outputs.md                    <- consolidated, real program run transcripts
+│
+├── Q1_Fibonacci/
+│   ├── fibonacci.c                   <- source code
+│   └── ALGORITHM.md                  <- problem statement, recurrence, pseudocode,
+│                                         complexity analysis, sample I/O
+│
+├── Q2_Knapsack01/
+│   ├── knapsack.c
+│   └── ALGORITHM.md
+│
+├── Q3_LCS/
+│   ├── lcs.c
+│   └── ALGORITHM.md
+│
+└── Q4_MatrixChainMultiplication/
+    ├── mcm.c
+    └── ALGORITHM.md
+```
+
+Each question has its **own folder** containing:
+1. The C source code (fully commented, self-contained, reads input from
+   stdin, prints the result **and** a complexity analysis to stdout).
+2. An `ALGORITHM.md` with the problem statement, why DP applies (optimal
+   substructure / overlapping subproblems), the recurrence relation,
+   pseudocode, a full complexity derivation, and a worked sample.
+
+All outputs from actually compiling and running the programs are
+consolidated in **`all_outputs.md`** at the top level, so you can see real
+results without needing a compiler.
+
+## Question Summary
+
+| # | Question | Algorithm | Time | Space |
+|---|----------|-----------|------|-------|
+| 1 | Nth Fibonacci number | Bottom-up tabulation / space-optimized / memoization | O(n) | O(n) or O(1) |
+| 2 | 0/1 Knapsack | 2D DP table over (items × capacity) | O(n·W) | O(n·W) |
+| 3 | Longest Common Subsequence | 2D DP table over string prefixes | O(m·n) | O(m·n) |
+| 4 | Matrix Chain Multiplication | Interval DP over chain length | O(N³) | O(N²) |
+
+## How to Compile & Run
+
+Each `.c` file is standalone. From inside any `Qx_.../` folder:
+```bash
+gcc -O2 -Wall -o solution <filename>.c -lm
+./solution
+```
+(`-lm` is only strictly needed for Q1 if you extend it with floating-point
+math; it's harmless to always include.) All four programs read their input
+interactively from stdin — see `all_outputs.md` for exactly what to type in,
+using the assignment's own sample input as the primary test case.
+
+## Verification Notes
+
+- **Q4 (Matrix Chain Multiplication)** was tested against the exact sample
+  input given in the assignment (`N=4, arr[]={10,30,5,60}`) and produces
+  **4500**, matching the expected output on the question sheet exactly, with
+  the required `O(N³)` time complexity.
+- **Q3 (LCS)** was tested against the classic textbook example
+  `X=AGGTAB, Y=GXTXAYB` → LCS = `"GTAB"`, length 4 — a well-known correct
+  result.
+- **Q2 (Knapsack)** was tested against a standard 4-item / capacity-50 case
+  and correctly identifies the optimal item subset and profit.
+- **Q1 (Fibonacci)** cross-checks three independent DP formulations
+  (tabulation, space-optimized, memoization) against each other on every
+  run — they always agree.
+
+## Complexity Analysis — Why DP Helps
+
+All four problems share the two properties that make Dynamic Programming
+applicable:
+- **Optimal substructure** — an optimal solution to the full problem is
+  built from optimal solutions to smaller subproblems of the same kind.
+- **Overlapping subproblems** — a naive recursive solution would recompute
+  the exact same subproblem many times; DP computes each one exactly once
+  and reuses the answer (via a table, for bottom-up, or a memo cache, for
+  top-down).
+
+This is why, e.g., Fibonacci drops from exponential `O(2ⁿ)` (naive
+recursion) to linear `O(n)` (DP), and Matrix Chain Multiplication drops
+from the Catalan-number-many parenthesizations (exponential) down to
+`O(N³)`.
 
