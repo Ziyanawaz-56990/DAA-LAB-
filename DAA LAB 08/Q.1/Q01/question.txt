@@ -1,0 +1,8 @@
+Design and Analysis of Algorithm (DAA), Lab-08 - Questions based on Dynamic Programming design paradigm
+Instructor: Dr. Ajaya Kumar Dash
+
+Question 1 (exact text from the question paper; mathematical symbols written in plain text):
+
+[Minimum Coin Change] Given an integer array of coin denominations C = {c1, c2, ..., cn} representing coins of different values, and an integer target amount V, find the minimum number of coins needed to make up that amount. You may assume an infinite supply of each coin denomination. If that amount of money cannot be made up by any combination of the coins, return -1.
+
+By choosing the proper input representation, write a program in C to validate your algorithm and derive the complexity analysis of your algorithm.
