@@ -1,0 +1,6 @@
+Design and Analysis of Algorithm (DAA), Lab-08 - Questions based on Dynamic Programming design paradigm
+Instructor: Dr. Ajaya Kumar Dash
+
+Question 2 (exact text from the question paper; mathematical symbols written in plain text):
+
+[Coin Change: Total number of ways] Given an array of distinct positive integers representing coin denominations C = {c1, c2, ..., cn} and a target amount V, find the total number of distinct combinations of coins that sum up to V. You may assume an infinite supply of each coin denomination. The order of coins does not matter (e.g., 1 + 2 and 2 + 1 are considered the same combination). By choosing the proper input representation, write a program in C to validate your algorithm and derive the complexity analysis of your algorithm.
