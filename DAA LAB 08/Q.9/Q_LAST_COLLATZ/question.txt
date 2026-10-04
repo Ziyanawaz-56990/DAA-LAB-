@@ -1,0 +1,17 @@
+Design and Analysis of Algorithm (DAA), Lab-08 - Questions based on Dynamic Programming design paradigm
+Instructor: Dr. Ajaya Kumar Dash
+
+Question 9 (exact text from the question paper; mathematical symbols written in plain text):
+
+[Collatz Conjecture] (Open Unsolved Problem): The Collatz Conjecture (also known as the 3n+1 problem or Ulam conjecture) defines a recurrence relation for any strictly positive integer n:
+
+            T(n) = n/2      if n is even
+            T(n) = 3n + 1   if n is odd
+
+The sequence repeatedly applies this function until n = 1. Although unproven and still an open problem, it is conjectured that the sequence reaches 1 for all positive integers. Write a modular C program to analyse the trajectory of a user-provided starting value n >= 1 and across an interval [a, b].
+
+Figure 1: Collatz conjecture paths for 5000 random starting points below 10^6 (Ref: wiki).   (see collatz_figure.png in this folder)
+
+Objective to give problem 9 as an assignment: To implement iterative control structures, functional decomposition, dynamic memory allocation/pointers, and integer overflow handling in C by simulating and analysing arithmetic trajectories defined by the Collatz Conjecture. Most importantly, to experience a so simple yet profound problem which is still open!! The simplicity of this problem is deceptive. The reason it remains open may lie in foundational issues in number theory, dynamical systems, and computability.
+
+(Note: this is Question 9 of the Lab-08 paper. It is the last question, so its folder is called Q_LAST_COLLATZ.)
