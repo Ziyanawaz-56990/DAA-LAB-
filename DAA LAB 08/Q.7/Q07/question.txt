@@ -1,0 +1,10 @@
+Design and Analysis of Algorithm (DAA), Lab-08 - Questions based on Dynamic Programming design paradigm
+Instructor: Dr. Ajaya Kumar Dash
+
+Question 7 (exact text from the question paper; mathematical symbols written in plain text):
+
+[Rod Cutting with Reconstruction] Given a rod of length n inches and an array of prices P = [p1, p2, ..., pn], where pi denotes the market price of a rod piece of length i inches, determine:
+(i) The maximum revenue obtainable by cutting up the rod and selling the pieces.
+(ii) The exact lengths of the pieces that constitute the optimal decomposition (reconstruction).
+
+Cuts are integral and can be made in any combination (including leaving the rod uncut), and the sum of the piece lengths must equal n. By choosing the proper input representation, write a program in C to validate your algorithm and derive the complexity analysis of your algorithm.
