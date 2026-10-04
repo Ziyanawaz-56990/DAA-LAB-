@@ -1,0 +1,6 @@
+Design and Analysis of Algorithm (DAA), Lab-08 - Questions based on Dynamic Programming design paradigm
+Instructor: Dr. Ajaya Kumar Dash
+
+Question 3 (exact text from the question paper; mathematical symbols written in plain text):
+
+[Longest Common Subsequence (LCS)] Given two sequences X = <x1, x2, ..., xm> and Y = <y1, y2, ..., yn>, compute the length of their longest common subsequence and reconstruct the actual subsequence string. By choosing the proper input representation, write a program in C to validate your algorithm and derive the complexity analysis of your algorithm.
