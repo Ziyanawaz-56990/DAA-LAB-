@@ -1,0 +1,6 @@
+Design and Analysis of Algorithm (DAA), Lab-08 - Questions based on Dynamic Programming design paradigm
+Instructor: Dr. Ajaya Kumar Dash
+
+Question 6 (exact text from the question paper; mathematical symbols written in plain text):
+
+[Edit Distance with Traceback Information] Given two strings A of length m and B of length n, compute the minimum number of operations (insertions, deletions, or substitutions) required to transform A into B, and print the traceback result. By choosing the proper input representation, write a program in C to validate your algorithm and derive the complexity analysis of your algorithm.
