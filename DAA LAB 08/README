@@ -1,1 +1,183 @@
+# DAA Lab 08 — Dynamic Programming
+
+**Course:** Design and Analysis of Algorithms (DAA), Lab-08 · BTech (CS-B and CE), 3rd Semester
+**Instructor:** Dr. Ajaya Kumar Dash · **Paper date:** September 29, 2026
+**Language:** C (standard C99, tested with GCC) · **Paradigm:** Dynamic Programming
+
+The original question paper is kept unchanged in this folder as [`DAA_LAB_08_QUESTION_PAPER.pdf`](DAA_LAB_08_QUESTION_PAPER.pdf).
+
+---
+
+## 1. Lab Overview
+The paper has **9 questions**. Questions 1–8 are classic **dynamic-programming** problems (coin change, LCS, LIS, edit distance, rod cutting, optimal BST). Question 9 is the **Collatz Conjecture**, an *open unsolved problem*, handled as a research-oriented computational investigation (see the [Collatz Research](#collatz-research) section). Every question has its own folder with the exact question, a written algorithm, and a C program. All run results are kept together in `Outputs/`.
+
+## 2. Objectives
+* Recognise when a problem has **optimal substructure** and **overlapping subproblems**.
+* Define a DP table, write its recurrence, fill it **bottom-up**, and **reconstruct** the actual answer (coins, subsequence, edit operations, cuts, tree).
+* Derive time and space complexity from the loops of the algorithm.
+* Choose a sensible **input representation** and validate programs with test cases.
+* Practise C: arrays, dynamic memory (`malloc`/`calloc`/`realloc`/`free`), functions, overflow handling.
+* Experience a simple-looking **open problem** (Collatz) and learn the difference between *experiment* and *proof*.
+
+## 3. Questions Covered
+Question 9 is the Collatz question; its folder is called `Q_LAST_COLLATZ`.
+
+| Question | Topic | Algorithm | C Program | Output |
+| -------- | ----- | --------- | --------- | ------ |
+| Q01 | Minimum Coin Change | [`Q01/algorithm.md`](Q01/algorithm.md) | [`Q01/program.c`](Q01/program.c) | [`Outputs/Q01_output.txt`](Outputs/Q01_output.txt) |
+| Q02 | Coin Change: total number of ways | [`Q02/algorithm.md`](Q02/algorithm.md) | [`Q02/program.c`](Q02/program.c) | [`Outputs/Q02_output.txt`](Outputs/Q02_output.txt) |
+| Q03 | Longest Common Subsequence (length + string) | [`Q03/algorithm.md`](Q03/algorithm.md) | [`Q03/program.c`](Q03/program.c) | [`Outputs/Q03_output.txt`](Outputs/Q03_output.txt) |
+| Q04 | Longest (strictly) Increasing Subsequence | [`Q04/algorithm.md`](Q04/algorithm.md) | [`Q04/program.c`](Q04/program.c) | [`Outputs/Q04_output.txt`](Outputs/Q04_output.txt) |
+| Q05 | Maximum Sum Increasing Subsequence | [`Q05/algorithm.md`](Q05/algorithm.md) | [`Q05/program.c`](Q05/program.c) | [`Outputs/Q05_output.txt`](Outputs/Q05_output.txt) |
+| Q06 | Edit Distance with Traceback | [`Q06/algorithm.md`](Q06/algorithm.md) | [`Q06/program.c`](Q06/program.c) | [`Outputs/Q06_output.txt`](Outputs/Q06_output.txt) |
+| Q07 | Rod Cutting with Reconstruction | [`Q07/algorithm.md`](Q07/algorithm.md) | [`Q07/program.c`](Q07/program.c) | [`Outputs/Q07_output.txt`](Outputs/Q07_output.txt) |
+| Q08 | Optimal Binary Search Tree (OBST) | [`Q08/algorithm.md`](Q08/algorithm.md) | [`Q08/program.c`](Q08/program.c) | [`Outputs/Q08_output.txt`](Outputs/Q08_output.txt) |
+| Q09 (`Q_LAST_COLLATZ`) | Collatz Conjecture (open problem, research investigation) | [`Q_LAST_COLLATZ/algorithm.md`](Q_LAST_COLLATZ/algorithm.md) | [`Q_LAST_COLLATZ/program.c`](Q_LAST_COLLATZ/program.c) | [`Outputs/Q_LAST_COLLATZ_output.txt`](Outputs/Q_LAST_COLLATZ_output.txt) |
+
+## 4. Concepts Covered
+* **Dynamic programming:** solve a problem by combining answers to smaller subproblems, storing each answer once (memoisation / tabulation).
+* **Optimal substructure:** an optimal solution contains optimal solutions of its subproblems.
+* **Overlapping subproblems:** the same subproblem is needed many times — the reason a plain recursion would be exponential.
+* **Bottom-up tabulation:** fill the table from the smallest subproblems upwards.
+* **Reconstruction / traceback:** use stored choices (`lastCoin`, `prev`, `firstCut`, `root`) or walk back through the table to print the actual solution.
+* **Loop order matters:** counting *combinations* (Q2) versus *permutations*.
+* **Pseudo-polynomial time:** Q1/Q2 run in O(n·V), polynomial in the value V.
+* **Complexity analysis:** counting loop iterations to get Θ(·) bounds; best / average / worst cases.
+* **Greedy vs DP:** a greedy strategy fails for coin change (Q1) — DP is needed.
+* **Binary search + patience idea (Q4):** an O(n log n) LIS used as an independent check.
+* **Probability-weighted search cost (Q8).**
+* **Open problems and finite evidence (Q9):** experiments vs proofs, integer overflow, stopping time.
+
+## 5. Project Structure
+```text
+DAA_LAB_08/
+│
+├── README.md
+├── DAA_LAB_08_QUESTION_PAPER.pdf
+│
+├── Q01/   question.txt  algorithm.md  program.c
+├── Q02/   question.txt  algorithm.md  program.c
+├── Q03/   question.txt  algorithm.md  program.c
+├── Q04/   question.txt  algorithm.md  program.c
+├── Q05/   question.txt  algorithm.md  program.c
+├── Q06/   question.txt  algorithm.md  program.c
+├── Q07/   question.txt  algorithm.md  program.c
+├── Q08/   question.txt  algorithm.md  program.c
+│
+├── Q_LAST_COLLATZ/
+│   ├── question.txt
+│   ├── algorithm.md
+│   ├── program.c
+│   ├── collatz_figure.png
+│   ├── research.md
+│   ├── research_notes.md
+│   └── references.md
+│
+└── Outputs/
+    ├── Q01_output.txt
+    ├── Q02_output.txt
+    ├── Q03_output.txt
+    ├── Q04_output.txt
+    ├── Q05_output.txt
+    ├── Q06_output.txt
+    ├── Q07_output.txt
+    ├── Q08_output.txt
+    └── Q_LAST_COLLATZ_output.txt
+```
+
+## 6. Explanation of Folder Organization
+* **One folder per question** (`Q01` … `Q08`, and `Q_LAST_COLLATZ` for the 9th question).
+* Each folder holds the **question** (`question.txt`, exact wording from the paper), the **algorithm** (`algorithm.md`) and the **C implementation** (`program.c`). Flow: *Question → Algorithm → C program → Output*.
+* **All execution results are centralised in `Outputs/`** — there is no `output.txt` inside the question folders.
+* The **original question PDF** is preserved unchanged in the root folder.
+* The Collatz folder additionally contains the figure from the paper and the research documents.
+
+**How the outputs were produced:** each `Outputs/*.txt` file was generated by compiling the program with `gcc -Wall -Wextra -std=c99 -pedantic` (no warnings) and running it on the listed test inputs. The results were also cross-checked against independent brute-force / reference computations on several hundred random inputs (no mismatches).
+
+## 7. How to Compile and Run
+You need a C compiler (GCC). Linux: `sudo apt install gcc`; macOS: install Xcode command-line tools (`xcode-select --install`); Windows: install MinGW-w64 or MSYS2 so that `gcc` works in the terminal.
+
+**Compile** (example for Q01; use the folder you want):
+```bash
+cd Q01
+gcc program.c -o program
+```
+(Optional strict mode: `gcc -Wall -Wextra -std=c99 -pedantic program.c -o program`.)
+
+**Run on Linux / macOS**
+```bash
+./program                      # then type the input and press Enter
+printf "3\n1 2 5\n11\n" | ./program      # or give the input directly
+./program < input.txt          # or from a file
+```
+
+**Run on Windows (Command Prompt)**
+```bat
+program.exe
+program.exe < input.txt
+```
+**Windows PowerShell:** `Get-Content input.txt | .\program.exe`
+
+**Input formats** (the programs print no prompts; type the numbers in this order):
+
+| Q | Input |
+|---|-------|
+| Q01 | `n`, then `n` coin values, then `V` |
+| Q02 | `n`, then `n` distinct coin values, then `V` |
+| Q03 | string `X`, string `Y` (no spaces) |
+| Q04 | `n`, then `n` integers |
+| Q05 | `n`, then `n` positive integers |
+| Q06 | string `A`, string `B` (no spaces) |
+| Q07 | `n`, then prices `p1 … pn` |
+| Q08 | `n`, then `p1 … pn`, then `q0 … qn` (probabilities) |
+| Q09 | start value `n`, then interval `a b` |
+
+## 8. Complexity Summary
+(`n`, `m`, `V` as defined in each `algorithm.md`; `S(n)` = number of Collatz steps for `n`.)
+
+| Q | Algorithm | Time (best / average / worst) | Space |
+|---|-----------|-------------------------------|-------|
+| Q01 | Min coin change DP | Θ(n·V) in all cases | Θ(V) |
+| Q02 | Number of ways DP | O(n) best (all coins > V), Θ(n·V) average and worst | Θ(V) |
+| Q03 | LCS table + traceback | Θ(m·n) in all cases | Θ(m·n) |
+| Q04 | LIS DP (plus O(n log n) check) | Θ(n²) in all cases (check method: O(n log n)) | Θ(n) |
+| Q05 | Max-sum increasing subsequence | Θ(n²) in all cases | Θ(n) |
+| Q06 | Edit distance + traceback | Θ(m·n) in all cases | Θ(m·n) |
+| Q07 | Rod cutting + reconstruction | Θ(n²) in all cases | Θ(n) |
+| Q08 | Optimal BST | Θ(n³) in all cases | Θ(n²) |
+| Q09 | Collatz experiment | per start value O(S(n)); interval: O(Σ S(m)). **No proven bound on S(n) exists** — bounding it for all n is the conjecture | Part A: O(S(n)); Part B: O(1) |
+
+## 9. Learning Outcomes
+After this lab you should be able to:
+1. Explain why each of Q1–Q8 is a DP problem (state the subproblem, the recurrence and the base cases).
+2. Fill a DP table by hand for a small example and match it with the program output.
+3. Reconstruct the actual optimal solution, not just its value.
+4. Derive Θ-bounds by counting loop iterations, and explain pseudo-polynomial time.
+5. Explain why greedy fails for coin change and why loop order changes "combinations" into "permutations".
+6. Write clean C with dynamic memory and input validation, and detect integer overflow.
+7. Explain the Collatz Conjecture, what our experiment shows, and — just as important — what it cannot show.
+
+---
+
+# Collatz Research
+
+Question 9 is **different from Questions 1–8**. It is not a "find the optimal answer" DP exercise. The Collatz Conjecture is an **open, unsolved problem**, so this question is treated as a **research-oriented computational investigation supported by C programming**: we study the mathematics, read what researchers have actually established, run a finite experiment, record observations and state the limitations.
+
+> **Our program does not prove (or disprove) the Collatz Conjecture.** Testing a very large finite number of starting values does not prove that the conjecture is true for every positive integer.
+
+| Document | What it contains |
+|----------|------------------|
+| [`Q_LAST_COLLATZ/research.md`](Q_LAST_COLLATZ/research.md) | Main research document: definitions, examples, difficulty, known results, our experiment, observations, limitations, open status, future directions |
+| [`Q_LAST_COLLATZ/research_notes.md`](Q_LAST_COLLATZ/research_notes.md) | Notes on each important source: question, idea, result, what it does *not* prove, what we learned |
+| [`Q_LAST_COLLATZ/references.md`](Q_LAST_COLLATZ/references.md) | Verified references (papers, surveys, repositories) |
+| [`Q_LAST_COLLATZ/program.c`](Q_LAST_COLLATZ/program.c) | Modular C program (trajectory of `n`, interval `[a, b]`, overflow-safe) |
+| [`Outputs/Q_LAST_COLLATZ_output.txt`](Outputs/Q_LAST_COLLATZ_output.txt) | Genuine program output and observations |
+| [`Q_LAST_COLLATZ/algorithm.md`](Q_LAST_COLLATZ/algorithm.md) | The algorithm, what is measured, what it can and cannot show |
+| [`Q_LAST_COLLATZ/collatz_figure.png`](Q_LAST_COLLATZ/collatz_figure.png) | Figure 1 extracted from the question paper |
+
+![Collatz paths](Q_LAST_COLLATZ/collatz_figure.png)
+
+*Figure 1 from the question paper: Collatz conjecture paths for 5000 random starting points below 10⁶ (Ref: wiki).*
+
+**Short summary of what is known** (details and sources in the documents above): the conjecture has been checked by computer for all start values up to about 2⁷¹ (Barina, 2025); "almost all" start values are known to come down (Terras, Everett, Tao); a non-trivial cycle would have to be very large (Hercher, 2023); but a proof for **all** positive integers is still missing.
 
