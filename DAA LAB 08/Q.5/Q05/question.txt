@@ -1,0 +1,6 @@
+Design and Analysis of Algorithm (DAA), Lab-08 - Questions based on Dynamic Programming design paradigm
+Instructor: Dr. Ajaya Kumar Dash
+
+Question 5 (exact text from the question paper; mathematical symbols written in plain text):
+
+[Maximum Sum Increasing Subsequence] Given an array of n positive integers A = [a0, a1, ..., a(n-1)], find the maximum possible sum of a strictly increasing subsequence. By choosing the proper input representation, write a program in C to validate your algorithm and derive the complexity analysis of your algorithm.
