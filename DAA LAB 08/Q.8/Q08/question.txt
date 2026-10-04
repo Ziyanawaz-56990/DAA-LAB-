@@ -1,0 +1,6 @@
+Design and Analysis of Algorithm (DAA), Lab-08 - Questions based on Dynamic Programming design paradigm
+Instructor: Dr. Ajaya Kumar Dash
+
+Question 8 (exact text from the question paper; mathematical symbols written in plain text):
+
+[Optimal Binary Search Trees (OBST)] Given a set of n distinct sorted keys K = <k1, k2, ..., kn> with search probabilities p1, p2, ..., pn, and n + 1 dummy keys d0, d1, ..., dn representing searches not in K with probabilities q0, q1, ..., qn, find the minimum expected search cost of a binary search tree. By choosing the proper input representation, write a program in C to validate your procedures and derive the complexity analysis of your algorithm.
