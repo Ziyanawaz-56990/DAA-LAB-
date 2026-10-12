@@ -1,0 +1,22 @@
+
+--- Test 1: classic (D=100,F=10) ---
+Target D=100, start fuel F=10, stations (distance,fuel): (10,60) (20,30) (30,30) (60,40) 
+Minimum stops (greedy) = 2
+DP cross-check          = 2  -> MATCH
+
+--- Test 2: no stations needed (F>=D) ---
+Target D=1, start fuel F=1, stations (distance,fuel): 
+Minimum stops (greedy) = 0
+DP cross-check          = 0  -> MATCH
+
+--- Test 3: impossible (first station out of reach) ---
+Target D=100, start fuel F=1, stations (distance,fuel): (5,10) 
+Minimum stops (greedy) = -1 (cannot reach)
+DP cross-check          = -1  -> MATCH
+
+--- Test 4: unsorted stations (D=15,F=3) ---
+Target D=15, start fuel F=3, stations (distance,fuel): (4,4) (5,2) (9,6) (3,1) 
+Minimum stops (greedy) = 4
+DP cross-check          = 4  -> MATCH
+
+=== Random validation: 1000/1000 cases greedy == DP ===

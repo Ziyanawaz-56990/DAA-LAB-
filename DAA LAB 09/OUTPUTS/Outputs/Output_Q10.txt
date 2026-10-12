@@ -1,0 +1,50 @@
+
+--- Test 1: chain (greedy optimal) ---
+Strings: abc bcd cde
+Greedy superstring : abcde (length 5)
+Optimal length     : 5
+Ratio greedy/optimal = 1.0000
+Greedy result contains every input string: yes
+
+--- Test 2: classic c(ab)^k, (ab)^k c, (ba)^k with k=2 ---
+Strings: cabab ababc baba
+Greedy superstring : cababcbaba (length 10)
+Optimal length     : 8
+Ratio greedy/optimal = 1.2500
+Greedy result contains every input string: yes
+
+--- Test 3: same family, k=3 ---
+Strings: cababab abababc bababa
+Greedy superstring : cabababcbababa (length 14)
+Optimal length     : 10
+Ratio greedy/optimal = 1.4000
+Greedy result contains every input string: yes
+
+--- Test 4: words (some overlap, some not) ---
+Strings: ate half lethal alpha alfalfa
+Greedy superstring : lethalfalfalphate (length 17)
+Optimal length     : 17
+Ratio greedy/optimal = 1.0000
+Greedy result contains every input string: yes
+
+--- Test 5: substring removal ('b' and 'abc' handled) ---
+Strings: abc b xbcy
+Greedy superstring : abcxbcy (length 7)
+Optimal length     : 7
+Ratio greedy/optimal = 1.0000
+Greedy result contains every input string: yes
+
+=== Random search (20000 tiny instances over {a,b}) ===
+Worst ratio found = 1.3750 on n=5 strings: bb bbbabb abbb abba abbb
+(The conjecture said <= 2; tiny instances stay far below 2 and below 9/4.)
+
+=== Ratio lower bound claimed by the Sept-2026 preprint: (9k+2)/(4k+4), even k >= 10 (UNVERIFIED claim) ===
+k =   10  ->  2.0909
+k =   12  ->  2.1154
+k =   14  ->  2.1333
+k =   16  ->  2.1471
+k =   18  ->  2.1579
+k =   20  ->  2.1667
+k =  100  ->  2.2327
+k =  500  ->  2.2465
+limit k -> infinity = 9/4 = 2.2500

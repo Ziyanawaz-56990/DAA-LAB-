@@ -1,0 +1,56 @@
+
+--- Test 1: classic textbook example (CLRS) ---
+Symbol  Freq  Len  Canonical code
+  'a'     45    1  0
+  'b'     13    3  100
+  'c'     12    3  101
+  'd'     16    3  110
+  'e'      9    4  1110
+  'f'      5    4  1111
+Total encoded bits = 224, expected length = 2.2400 bits/symbol
+Check 1 (Kraft sum == 1): PASS
+Check 2 (prefix-free)   : PASS
+Check 3 (cost equals independent O(n^2) merge cost): PASS
+
+Text used for Test 2: "abracadabra"
+--- Test 2: frequencies counted from text ---
+Symbol  Freq  Len  Canonical code
+  'a'      5    1  0
+  'b'      2    3  100
+  'c'      1    3  101
+  'd'      1    3  110
+  'r'      2    3  111
+Total encoded bits = 23, expected length = 2.0909 bits/symbol
+Check 1 (Kraft sum == 1): PASS
+Check 2 (prefix-free)   : PASS
+Check 3 (cost equals independent O(n^2) merge cost): PASS
+
+--- Test 3: equal frequencies (balanced tree) ---
+Symbol  Freq  Len  Canonical code
+  'w'      1    2  00
+  'x'      1    2  01
+  'y'      1    2  10
+  'z'      1    2  11
+Total encoded bits = 8, expected length = 2.0000 bits/symbol
+Check 1 (Kraft sum == 1): PASS
+Check 2 (prefix-free)   : PASS
+Check 3 (cost equals independent O(n^2) merge cost): PASS
+
+--- Test 4: two symbols ---
+Symbol  Freq  Len  Canonical code
+  'p'      7    1  0
+  'q'      3    1  1
+Total encoded bits = 10, expected length = 1.0000 bits/symbol
+Check 1 (Kraft sum == 1): PASS
+Check 2 (prefix-free)   : PASS
+Check 3 (cost equals independent O(n^2) merge cost): PASS
+
+--- Test 5: single symbol (edge case, gets 1-bit code) ---
+Symbol  Freq  Len  Canonical code
+  'z'     10    1  0
+Total encoded bits = 10, expected length = 1.0000 bits/symbol
+Check 1 (Kraft sum == 1): PASS
+Check 2 (prefix-free)   : PASS
+Check 3 (cost equals independent O(n^2) merge cost): PASS
+
+=== Random validation: 500/500 cases passed (cost match + Kraft equality) ===

@@ -1,0 +1,32 @@
+
+--- Test 1 ---
+Ratings: 1 0 2 
+Candies: 2 1 2 
+Minimum total = 5 | valid distribution: yes | relaxation check = 5 -> MATCH
+
+--- Test 2: equal neighbours need no extra candy ---
+Ratings: 1 2 2 
+Candies: 1 2 1 
+Minimum total = 4 | valid distribution: yes | relaxation check = 4 -> MATCH
+
+--- Test 3: plateau in the middle ---
+Ratings: 1 2 87 87 87 2 1 
+Candies: 1 2 3 1 3 2 1 
+Minimum total = 13 | valid distribution: yes | relaxation check = 13 -> MATCH
+
+--- Test 4: strictly decreasing ---
+Ratings: 5 4 3 2 1 
+Candies: 5 4 3 2 1 
+Minimum total = 15 | valid distribution: yes | relaxation check = 15 -> MATCH
+
+--- Test 5: peak at the end side ---
+Ratings: 1 3 4 5 2 
+Candies: 1 2 3 4 1 
+Minimum total = 11 | valid distribution: yes | relaxation check = 11 -> MATCH
+
+--- Test 6: single child ---
+Ratings: 7 
+Candies: 1 
+Minimum total = 1 | valid distribution: yes | relaxation check = 1 -> MATCH
+
+=== Random validation: 1000/1000 cases (two-pass == relaxation, and distribution valid) ===

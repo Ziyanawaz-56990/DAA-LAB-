@@ -1,0 +1,350 @@
+=================== Q01_Fractional_Knapsack_Deterioration ===================
+
+--- Test 1: mixed items ---
+Capacity W = 10
+Item   v    w   rho=v/w  lambda
+  1   60.0   6   10.00    0.50
+  2   50.0   5   10.00    1.00
+  3   40.0   4   10.00    0.20
+DP schedule (decay-descending order): [item 2: 1/5 units, starts t=0] [item 1: 5/6 units, starts t=1] [item 3: 4/4 units, starts t=6] 
+Optimal total value (DP)      = 86.500
+Naive density-greedy value    = 80.500   <-- naive greedy is WORSE
+Brute force (all orders/amounts) = 86.500  -> MATCH
+
+--- Test 2: counter-example for naive greedy (X: rho=10,lam~0 ; Y: rho=9.9,lam=5) ---
+Capacity W = 2
+Item   v    w   rho=v/w  lambda
+  1   10.0   1   10.00    0.00
+  2    9.9   1    9.90    5.00
+DP schedule (decay-descending order): [item 2: 1/1 units, starts t=0] [item 1: 1/1 units, starts t=1] 
+Optimal total value (DP)      = 19.900
+Naive density-greedy value    = 14.900   <-- naive greedy is WORSE
+Brute force (all orders/amounts) = 19.900  -> MATCH
+
+--- Test 3: four items, tight capacity ---
+Capacity W = 6
+Item   v    w   rho=v/w  lambda
+  1   30.0   3   10.00    4.00
+  2   28.0   4    7.00    0.10
+  3   20.0   2   10.00    2.00
+  4   15.0   5    3.00    0.00
+DP schedule (decay-descending order): [item 1: 1/3 units, starts t=0] [item 3: 1/2 units, starts t=1] [item 2: 4/4 units, starts t=2] 
+Optimal total value (DP)      = 44.600
+Naive density-greedy value    = 44.600 
+Brute force (all orders/amounts) = 44.600  -> MATCH
+
+=== Random validation: 300/300 cases DP == brute force ===
+=== Naive density-greedy was strictly worse in 129 of 300 cases ===
+
+=================== Q02_Huffman_Coding ===================
+
+--- Test 1: classic textbook example (CLRS) ---
+Symbol  Freq  Len  Canonical code
+  'a'     45    1  0
+  'b'     13    3  100
+  'c'     12    3  101
+  'd'     16    3  110
+  'e'      9    4  1110
+  'f'      5    4  1111
+Total encoded bits = 224, expected length = 2.2400 bits/symbol
+Check 1 (Kraft sum == 1): PASS
+Check 2 (prefix-free)   : PASS
+Check 3 (cost equals independent O(n^2) merge cost): PASS
+
+Text used for Test 2: "abracadabra"
+--- Test 2: frequencies counted from text ---
+Symbol  Freq  Len  Canonical code
+  'a'      5    1  0
+  'b'      2    3  100
+  'c'      1    3  101
+  'd'      1    3  110
+  'r'      2    3  111
+Total encoded bits = 23, expected length = 2.0909 bits/symbol
+Check 1 (Kraft sum == 1): PASS
+Check 2 (prefix-free)   : PASS
+Check 3 (cost equals independent O(n^2) merge cost): PASS
+
+--- Test 3: equal frequencies (balanced tree) ---
+Symbol  Freq  Len  Canonical code
+  'w'      1    2  00
+  'x'      1    2  01
+  'y'      1    2  10
+  'z'      1    2  11
+Total encoded bits = 8, expected length = 2.0000 bits/symbol
+Check 1 (Kraft sum == 1): PASS
+Check 2 (prefix-free)   : PASS
+Check 3 (cost equals independent O(n^2) merge cost): PASS
+
+--- Test 4: two symbols ---
+Symbol  Freq  Len  Canonical code
+  'p'      7    1  0
+  'q'      3    1  1
+Total encoded bits = 10, expected length = 1.0000 bits/symbol
+Check 1 (Kraft sum == 1): PASS
+Check 2 (prefix-free)   : PASS
+Check 3 (cost equals independent O(n^2) merge cost): PASS
+
+--- Test 5: single symbol (edge case, gets 1-bit code) ---
+Symbol  Freq  Len  Canonical code
+  'z'     10    1  0
+Total encoded bits = 10, expected length = 1.0000 bits/symbol
+Check 1 (Kraft sum == 1): PASS
+Check 2 (prefix-free)   : PASS
+Check 3 (cost equals independent O(n^2) merge cost): PASS
+
+=== Random validation: 500/500 cases passed (cost match + Kraft equality) ===
+
+=================== Q03_Minimum_Refuelling_Stops ===================
+
+--- Test 1: classic (D=100,F=10) ---
+Target D=100, start fuel F=10, stations (distance,fuel): (10,60) (20,30) (30,30) (60,40) 
+Minimum stops (greedy) = 2
+DP cross-check          = 2  -> MATCH
+
+--- Test 2: no stations needed (F>=D) ---
+Target D=1, start fuel F=1, stations (distance,fuel): 
+Minimum stops (greedy) = 0
+DP cross-check          = 0  -> MATCH
+
+--- Test 3: impossible (first station out of reach) ---
+Target D=100, start fuel F=1, stations (distance,fuel): (5,10) 
+Minimum stops (greedy) = -1 (cannot reach)
+DP cross-check          = -1  -> MATCH
+
+--- Test 4: unsorted stations (D=15,F=3) ---
+Target D=15, start fuel F=3, stations (distance,fuel): (4,4) (5,2) (9,6) (3,1) 
+Minimum stops (greedy) = 4
+DP cross-check          = 4  -> MATCH
+
+=== Random validation: 1000/1000 cases greedy == DP ===
+
+=================== Q04_Connect_Sticks ===================
+
+--- Test 1 ---
+Sticks: 2 4 3 
+Minimum cost (greedy) = 14
+Brute force           = 14 -> MATCH
+
+--- Test 2 ---
+Sticks: 1 8 3 5 
+Minimum cost (greedy) = 30
+Brute force           = 30 -> MATCH
+
+--- Test 3: single stick (cost 0) ---
+Sticks: 5 
+Minimum cost (greedy) = 0
+Brute force           = 0 -> MATCH
+
+--- Test 4: equal sticks ---
+Sticks: 1 1 1 1 
+Minimum cost (greedy) = 8
+Brute force           = 8 -> MATCH
+
+--- Test 5: six sticks ---
+Sticks: 10 3 7 1 20 4 
+Minimum cost (greedy) = 97
+Brute force           = 97 -> MATCH
+
+=== Random validation: 500/500 cases greedy == brute force ===
+
+=================== Q05_Candy_Distribution ===================
+
+--- Test 1 ---
+Ratings: 1 0 2 
+Candies: 2 1 2 
+Minimum total = 5 | valid distribution: yes | relaxation check = 5 -> MATCH
+
+--- Test 2: equal neighbours need no extra candy ---
+Ratings: 1 2 2 
+Candies: 1 2 1 
+Minimum total = 4 | valid distribution: yes | relaxation check = 4 -> MATCH
+
+--- Test 3: plateau in the middle ---
+Ratings: 1 2 87 87 87 2 1 
+Candies: 1 2 3 1 3 2 1 
+Minimum total = 13 | valid distribution: yes | relaxation check = 13 -> MATCH
+
+--- Test 4: strictly decreasing ---
+Ratings: 5 4 3 2 1 
+Candies: 5 4 3 2 1 
+Minimum total = 15 | valid distribution: yes | relaxation check = 15 -> MATCH
+
+--- Test 5: peak at the end side ---
+Ratings: 1 3 4 5 2 
+Candies: 1 2 3 4 1 
+Minimum total = 11 | valid distribution: yes | relaxation check = 11 -> MATCH
+
+--- Test 6: single child ---
+Ratings: 7 
+Candies: 1 
+Minimum total = 1 | valid distribution: yes | relaxation check = 1 -> MATCH
+
+=== Random validation: 1000/1000 cases (two-pass == relaxation, and distribution valid) ===
+
+=================== Q06_Reorganise_String_K_Apart ===================
+--- Sample tests ---
+S="aabbcc", K=3  ->  "abcabc"  (valid: yes)   brute-force says possible -> MATCH
+S="aaabc", K=3  ->  "" (impossible)   brute-force says impossible -> MATCH
+S="aaadbbcc", K=2  ->  "abacabcd"  (valid: yes)   brute-force says possible -> MATCH
+S="aab", K=2  ->  "aba"  (valid: yes)   brute-force says possible -> MATCH
+S="aa", K=2  ->  "" (impossible)   brute-force says impossible -> MATCH
+S="abc", K=1  ->  "abc"  (valid: yes)   brute-force says possible -> MATCH
+S="a", K=5  ->  "a"  (valid: yes)   brute-force says possible -> MATCH
+S="aaaa", K=1  ->  "aaaa"  (valid: yes)   brute-force says possible -> MATCH
+S="aabbccdd", K=4  ->  "abcdabcd"  (valid: yes)   brute-force says possible -> MATCH
+
+=== Random validation: 2000/2000 cases (greedy feasibility == brute force, output valid) ===
+
+=================== Q07_Minimise_Deviation ===================
+
+--- Test 1 ---
+Array: 1 2 3 4 
+Minimum deviation (greedy) = 1
+Brute force                = 1 -> MATCH
+
+--- Test 2 ---
+Array: 4 1 5 20 3 
+Minimum deviation (greedy) = 3
+Brute force                = 3 -> MATCH
+
+--- Test 3 ---
+Array: 2 10 8 
+Minimum deviation (greedy) = 3
+Brute force                = 3 -> MATCH
+
+--- Test 4: single element ---
+Array: 7 
+Minimum deviation (greedy) = 0
+Brute force                = 0 -> MATCH
+
+--- Test 5: all equal ---
+Array: 3 3 3 
+Minimum deviation (greedy) = 0
+Brute force                = 0 -> MATCH
+
+=== Random validation: 1000/1000 cases greedy == brute force ===
+
+=================== Q08_Meeting_Rooms ===================
+
+--- Test 1 ---
+Intervals: [0,30] [5,10] [15,20] 
+Minimum rooms (greedy) = 2 | O(n^2) check = 2 -> MATCH
+
+--- Test 2: no overlap ---
+Intervals: [7,10] [2,4] 
+Minimum rooms (greedy) = 1 | O(n^2) check = 1 -> MATCH
+
+--- Test 3: back-to-back meetings share a room ---
+Intervals: [1,5] [5,10] 
+Minimum rooms (greedy) = 1 | O(n^2) check = 1 -> MATCH
+
+--- Test 4: all overlap ---
+Intervals: [1,10] [2,10] [3,10] [4,10] 
+Minimum rooms (greedy) = 4 | O(n^2) check = 4 -> MATCH
+
+--- Test 5: mixed ---
+Intervals: [9,12] [9,10] [11,14] [13,15] [10,13] 
+Minimum rooms (greedy) = 3 | O(n^2) check = 3 -> MATCH
+
+=== Random validation: 2000/2000 cases sweep == O(n^2) check ===
+
+=================== Q09_Hu_Tucker ===================
+
+--- Test 1 ---
+Leaf  weight  depth  alphabetic code
+  1       3     2    00
+  2       1     3    010
+  3       2     3    011
+  4       5     2    10
+  5       4     2    11
+Hu-Tucker cost = 33 | DP optimum = 33 -> MATCH | leaves form a valid ordered tree: yes
+
+--- Test 2: light leaves in the middle ---
+Leaf  weight  depth  alphabetic code
+  1      10     2    00
+  2       1     3    010
+  3       1     3    011
+  4      10     1    1
+Hu-Tucker cost = 36 | DP optimum = 36 -> MATCH | leaves form a valid ordered tree: yes
+
+--- Test 3: equal weights ---
+Leaf  weight  depth  alphabetic code
+  1       1     3    000
+  2       1     3    001
+  3       1     3    010
+  4       1     3    011
+  5       1     3    100
+  6       1     3    101
+  7       1     3    110
+  8       1     3    111
+Hu-Tucker cost = 24 | DP optimum = 24 -> MATCH | leaves form a valid ordered tree: yes
+
+--- Test 4 ---
+Leaf  weight  depth  alphabetic code
+  1      40     2    00
+  2       5     4    0100
+  3       3     4    0101
+  4       7     3    011
+  5      30     2    10
+  6      15     2    11
+Hu-Tucker cost = 223 | DP optimum = 223 -> MATCH | leaves form a valid ordered tree: yes
+
+--- Test 5: single leaf ---
+Leaf  weight  depth  alphabetic code
+  1       5     0    (root)
+Hu-Tucker cost = 0 | DP optimum = 0 -> MATCH | leaves form a valid ordered tree: yes
+
+=== Random validation: 3000/3000 cases Hu-Tucker cost == DP optimum (and valid tree) ===
+
+=================== Q10_Greedy_Superstring ===================
+
+--- Test 1: chain (greedy optimal) ---
+Strings: abc bcd cde
+Greedy superstring : abcde (length 5)
+Optimal length     : 5
+Ratio greedy/optimal = 1.0000
+Greedy result contains every input string: yes
+
+--- Test 2: classic c(ab)^k, (ab)^k c, (ba)^k with k=2 ---
+Strings: cabab ababc baba
+Greedy superstring : cababcbaba (length 10)
+Optimal length     : 8
+Ratio greedy/optimal = 1.2500
+Greedy result contains every input string: yes
+
+--- Test 3: same family, k=3 ---
+Strings: cababab abababc bababa
+Greedy superstring : cabababcbababa (length 14)
+Optimal length     : 10
+Ratio greedy/optimal = 1.4000
+Greedy result contains every input string: yes
+
+--- Test 4: words (some overlap, some not) ---
+Strings: ate half lethal alpha alfalfa
+Greedy superstring : lethalfalfalphate (length 17)
+Optimal length     : 17
+Ratio greedy/optimal = 1.0000
+Greedy result contains every input string: yes
+
+--- Test 5: substring removal ('b' and 'abc' handled) ---
+Strings: abc b xbcy
+Greedy superstring : abcxbcy (length 7)
+Optimal length     : 7
+Ratio greedy/optimal = 1.0000
+Greedy result contains every input string: yes
+
+=== Random search (20000 tiny instances over {a,b}) ===
+Worst ratio found = 1.3750 on n=5 strings: bb bbbabb abbb abba abbb
+(The conjecture said <= 2; tiny instances stay far below 2 and below 9/4.)
+
+=== Ratio lower bound claimed by the Sept-2026 preprint: (9k+2)/(4k+4), even k >= 10 (UNVERIFIED claim) ===
+k =   10  ->  2.0909
+k =   12  ->  2.1154
+k =   14  ->  2.1333
+k =   16  ->  2.1471
+k =   18  ->  2.1579
+k =   20  ->  2.1667
+k =  100  ->  2.2327
+k =  500  ->  2.2465
+limit k -> infinity = 9/4 = 2.2500
+

@@ -1,0 +1,46 @@
+
+--- Test 1 ---
+Leaf  weight  depth  alphabetic code
+  1       3     2    00
+  2       1     3    010
+  3       2     3    011
+  4       5     2    10
+  5       4     2    11
+Hu-Tucker cost = 33 | DP optimum = 33 -> MATCH | leaves form a valid ordered tree: yes
+
+--- Test 2: light leaves in the middle ---
+Leaf  weight  depth  alphabetic code
+  1      10     2    00
+  2       1     3    010
+  3       1     3    011
+  4      10     1    1
+Hu-Tucker cost = 36 | DP optimum = 36 -> MATCH | leaves form a valid ordered tree: yes
+
+--- Test 3: equal weights ---
+Leaf  weight  depth  alphabetic code
+  1       1     3    000
+  2       1     3    001
+  3       1     3    010
+  4       1     3    011
+  5       1     3    100
+  6       1     3    101
+  7       1     3    110
+  8       1     3    111
+Hu-Tucker cost = 24 | DP optimum = 24 -> MATCH | leaves form a valid ordered tree: yes
+
+--- Test 4 ---
+Leaf  weight  depth  alphabetic code
+  1      40     2    00
+  2       5     4    0100
+  3       3     4    0101
+  4       7     3    011
+  5      30     2    10
+  6      15     2    11
+Hu-Tucker cost = 223 | DP optimum = 223 -> MATCH | leaves form a valid ordered tree: yes
+
+--- Test 5: single leaf ---
+Leaf  weight  depth  alphabetic code
+  1       5     0    (root)
+Hu-Tucker cost = 0 | DP optimum = 0 -> MATCH | leaves form a valid ordered tree: yes
+
+=== Random validation: 3000/3000 cases Hu-Tucker cost == DP optimum (and valid tree) ===

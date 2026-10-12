@@ -1,0 +1,12 @@
+--- Sample tests ---
+S="aabbcc", K=3  ->  "abcabc"  (valid: yes)   brute-force says possible -> MATCH
+S="aaabc", K=3  ->  "" (impossible)   brute-force says impossible -> MATCH
+S="aaadbbcc", K=2  ->  "abacabcd"  (valid: yes)   brute-force says possible -> MATCH
+S="aab", K=2  ->  "aba"  (valid: yes)   brute-force says possible -> MATCH
+S="aa", K=2  ->  "" (impossible)   brute-force says impossible -> MATCH
+S="abc", K=1  ->  "abc"  (valid: yes)   brute-force says possible -> MATCH
+S="a", K=5  ->  "a"  (valid: yes)   brute-force says possible -> MATCH
+S="aaaa", K=1  ->  "aaaa"  (valid: yes)   brute-force says possible -> MATCH
+S="aabbccdd", K=4  ->  "abcdabcd"  (valid: yes)   brute-force says possible -> MATCH
+
+=== Random validation: 2000/2000 cases (greedy feasibility == brute force, output valid) ===

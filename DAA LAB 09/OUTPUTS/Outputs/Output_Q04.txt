@@ -1,0 +1,27 @@
+
+--- Test 1 ---
+Sticks: 2 4 3 
+Minimum cost (greedy) = 14
+Brute force           = 14 -> MATCH
+
+--- Test 2 ---
+Sticks: 1 8 3 5 
+Minimum cost (greedy) = 30
+Brute force           = 30 -> MATCH
+
+--- Test 3: single stick (cost 0) ---
+Sticks: 5 
+Minimum cost (greedy) = 0
+Brute force           = 0 -> MATCH
+
+--- Test 4: equal sticks ---
+Sticks: 1 1 1 1 
+Minimum cost (greedy) = 8
+Brute force           = 8 -> MATCH
+
+--- Test 5: six sticks ---
+Sticks: 10 3 7 1 20 4 
+Minimum cost (greedy) = 97
+Brute force           = 97 -> MATCH
+
+=== Random validation: 500/500 cases greedy == brute force ===

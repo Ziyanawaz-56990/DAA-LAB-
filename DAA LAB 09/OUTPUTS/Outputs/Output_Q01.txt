@@ -1,0 +1,36 @@
+
+--- Test 1: mixed items ---
+Capacity W = 10
+Item   v    w   rho=v/w  lambda
+  1   60.0   6   10.00    0.50
+  2   50.0   5   10.00    1.00
+  3   40.0   4   10.00    0.20
+DP schedule (decay-descending order): [item 2: 1/5 units, starts t=0] [item 1: 5/6 units, starts t=1] [item 3: 4/4 units, starts t=6] 
+Optimal total value (DP)      = 86.500
+Naive density-greedy value    = 80.500   <-- naive greedy is WORSE
+Brute force (all orders/amounts) = 86.500  -> MATCH
+
+--- Test 2: counter-example for naive greedy (X: rho=10,lam~0 ; Y: rho=9.9,lam=5) ---
+Capacity W = 2
+Item   v    w   rho=v/w  lambda
+  1   10.0   1   10.00    0.00
+  2    9.9   1    9.90    5.00
+DP schedule (decay-descending order): [item 2: 1/1 units, starts t=0] [item 1: 1/1 units, starts t=1] 
+Optimal total value (DP)      = 19.900
+Naive density-greedy value    = 14.900   <-- naive greedy is WORSE
+Brute force (all orders/amounts) = 19.900  -> MATCH
+
+--- Test 3: four items, tight capacity ---
+Capacity W = 6
+Item   v    w   rho=v/w  lambda
+  1   30.0   3   10.00    4.00
+  2   28.0   4    7.00    0.10
+  3   20.0   2   10.00    2.00
+  4   15.0   5    3.00    0.00
+DP schedule (decay-descending order): [item 1: 1/3 units, starts t=0] [item 3: 1/2 units, starts t=1] [item 2: 4/4 units, starts t=2] 
+Optimal total value (DP)      = 44.600
+Naive density-greedy value    = 44.600 
+Brute force (all orders/amounts) = 44.600  -> MATCH
+
+=== Random validation: 300/300 cases DP == brute force ===
+=== Naive density-greedy was strictly worse in 129 of 300 cases ===

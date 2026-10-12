@@ -1,0 +1,23 @@
+Every merge below was checked to have the MAXIMUM overlap (legal greedy step).
+
+k=10 t= 1 |S|=  22  OPT=   31  greedy=   47 (paper formula 47)  ratio=1.5161  OK
+k=10 t= 2 |S|=  44  OPT=   53  greedy=   93 (paper formula 93)  ratio=1.7547  OK
+k=10 t= 3 |S|=  66  OPT=   75  greedy=  139 (paper formula 139)  ratio=1.8533  OK
+k=10 t= 6 |S|= 132  OPT=  141  greedy=  277 (paper formula 277)  ratio=1.9645  OK
+k=12 t= 1 |S|=  26  OPT=   37  greedy=   56 (paper formula 56)  ratio=1.5135  OK
+k=12 t= 2 |S|=  52  OPT=   63  greedy=  111 (paper formula 111)  ratio=1.7619  OK
+k=12 t= 3 |S|=  78  OPT=   89  greedy=  166 (paper formula 166)  ratio=1.8652  OK
+k=12 t= 6 |S|= 156  OPT=  167  greedy=  331 (paper formula 331)  ratio=1.9820  OK
+k=14 t= 1 |S|=  30  OPT=   43  greedy=   65 (paper formula 65)  ratio=1.5116  OK
+k=14 t= 2 |S|=  60  OPT=   73  greedy=  129 (paper formula 129)  ratio=1.7671  OK
+k=14 t= 3 |S|=  90  OPT=  103  greedy=  193 (paper formula 193)  ratio=1.8738  OK
+k=14 t= 6 |S|= 180  OPT=  193  greedy=  385 (paper formula 385)  ratio=1.9948  OK
+
+Paper's limit for t -> infinity: (9k+2)/(4k+4):
+  k=10: 2.0909
+  k=12: 2.1154
+  k=14: 2.1333
+
+--- larger t (ratio passes 2 for k=10) ---
+k=10 t=15 |S|= 330  OPT=  339  greedy=  691 (paper formula 691)  ratio=2.0383  OK
+k=10 t=30 |S|= 660  OPT=  669  greedy= 1381 (paper formula 1381)  ratio=2.0643  OK
