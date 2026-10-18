@@ -1,0 +1,5 @@
+After deleting vertex 3: max component sum = 6
+After deleting vertex 1: max component sum = 4
+After deleting vertex 5: max component sum = 2
+After deleting vertex 2: max component sum = 1
+After deleting vertex 4: max component sum = 0
