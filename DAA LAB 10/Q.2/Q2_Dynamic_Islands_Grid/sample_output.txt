@@ -1,0 +1,10 @@
+After op 1: land (0,0) -> islands = 1
+After op 2: land (0,1) -> islands = 1
+After op 3: land (1,2) -> islands = 2
+After op 4: land (2,1) -> islands = 3
+After op 5: land (1,1) -> islands = 1
+After op 6: land (1,1) -> islands = 1 (already land)
+Final grid ('#' land, '.' water):
+##.
+.##
+.#.
