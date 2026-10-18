@@ -10,7 +10,7 @@
 | **Lab date** | October 13, 2026 |
 | **Difficulty** | Medium – Hard |
 | **Language** | C (C99, compiled with `gcc -O2 -Wall -Wextra`) |
-| **Submitted by** | _\<Name\> — \<Roll No.\>_ |
+| **Submitted by** | _Ziya Nawaz — \ B125080_ |
 
 ---
 
