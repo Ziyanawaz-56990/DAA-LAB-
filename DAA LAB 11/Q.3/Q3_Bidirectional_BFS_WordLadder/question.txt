@@ -1,0 +1,26 @@
+Question 3: [Bidirectional BFS for Shortest Transformation Sequence in a Word Graph]
+
+You are given:
+  - A dictionary D containing N unique words, where every word has the exact
+    same length L.
+  - A starting word A and a target word B, both of length L.
+
+A valid mutation step consists of changing exactly one character of a word such
+that the resulting word exists in dictionary D. A transformation sequence from
+A to B is an ordered sequence of words W0, W1, W2, ..., Wk such that:
+  1. W0 = A and Wk = B.
+  2. Every intermediate word Wi is in D for all 1 <= i <= k. (Note: whether A
+     must initially be in D is typically specified by the input constraints,
+     but B must always be in D.)
+  3. For every adjacent pair (W(i-1), Wi), the two words differ by exactly one
+     character (i.e., their Hamming distance is 1).
+
+Objective: Compute the minimum number of mutations k required to transform A
+into B. If A cannot be transformed into B through valid intermediate words in D,
+return -1 (or report that no valid path exists). Constraints:
+  - N <= 10^5 (number of dictionary words)
+  - L <= 10   (length of each word)
+  - All words consist solely of lowercase English letters ('a' to 'z').
+
+By choosing the proper input representation, write a program in C to validate
+your algorithm and derive the complexity analysis of your algorithm.

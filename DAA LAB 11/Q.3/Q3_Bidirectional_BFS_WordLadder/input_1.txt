@@ -1,0 +1,3 @@
+6 3
+hit cog
+hot dot dog lot log cog
