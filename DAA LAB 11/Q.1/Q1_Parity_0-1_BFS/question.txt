@@ -1,0 +1,18 @@
+Question 1: [Shortest Path on Parity-Constrained Graphs via 0-1 BFS]
+
+You are given a directed graph G = (V, E), a designated source vertex S in V,
+and an extra penalty cost C >= 0. Every directed edge (u, v) in E has a weight
+w(u, v) in {0, 1}.
+
+For any path P from S to a vertex v:
+  1. Let W(P)  denote the sum of all edge weights along P.
+  2. Let k1(P) denote the total count of weight-1 edges traversed in P.
+  3. The effective cost of path P is defined as:
+        Cost(P) = W(P) + 0   if k1(P) is even
+        Cost(P) = W(P) + C   if k1(P) is odd
+
+Objective: For every vertex v in V, compute the minimum possible Cost(P) among
+all valid paths from S to v. If a node v cannot be reached from S, report that
+it is unreachable. By choosing the proper input representation, write a program
+in C to validate your algorithm and derive the complexity analysis of your
+algorithm.
