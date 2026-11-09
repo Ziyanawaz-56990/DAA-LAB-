@@ -1,0 +1,119 @@
+# DAA Lab 11 - Applications of Breadth-First Search (BFS)
+
+**Course:** Design and Analysis of Algorithms (DAA)
+**Class:** BTech (CS-B and CE), 3rd Semester
+**Date:** October 27, 2026
+**Instructor:** Dr. Ajaya Kumar Dash
+
+The original question paper is included as [`DAA_LAB_11.pdf`](DAA_LAB_11.pdf).
+
+---
+
+```
+DAA_LAB_11/
+├── README.md                      <- this file
+├── DAA_LAB_11.pdf                 <- original lab sheet
+├── run_all.sh                     <- compiles + runs everything, fills Outputs/
+├── Q1_Parity_0-1_BFS/
+│   ├── question.txt               <- the question
+│   ├── algorithm.md               <- idea, pseudocode, proof, complexity
+│   ├── program.c                  <- C solution
+│   └── input_1.txt, input_2.txt   <- sample inputs
+├── Q2_MultiSource_BFS_Voronoi/    (same 4 kinds of files)
+├── Q3_Bidirectional_BFS_WordLadder/ (same 4 kinds of files)
+└── Outputs/                       <- saved output of every program (input + result)
+```
+
+## How to compile and run
+
+Requires only `gcc`.
+
+```bash
+# everything at once (rewrites the Outputs/ folder)
+./run_all.sh
+
+# or one question at a time
+cd Q1_Parity_0-1_BFS
+gcc -Wall -Wextra -O2 -o program program.c
+./program < input_1.txt
+```
+
+Every program reads from standard input (`stdin`) and prints to standard output.
+
+---
+
+## Summary
+
+| # | Problem | Technique | Input representation | Time | Space |
+|---|---------|-----------|----------------------|------|-------|
+| 1 | Parity-constrained shortest path | 0-1 BFS on a doubled (vertex, parity) graph | Adjacency list | O(V + E) | O(V + E) |
+| 2 | Radius-constrained Voronoi cells | Multi-source BFS, hubs queued in index order | Adjacency list | O(V + E) | O(V + E) |
+| 3 | Shortest word transformation | Bidirectional BFS + hash table | Hash table of words (graph built implicitly) | O(N · L² · 26) | O(N · L) |
+
+### Q1 - Parity-Constrained Shortest Path (0-1 BFS)
+Since all weights are 0 or 1, `W(P) = k1(P)`, so only the **parity** of the
+weight matters. Each vertex is split into `(v, even)` and `(v, odd)`; a
+weight-1 edge flips the parity and costs 1, a weight-0 edge keeps it and costs
+0. A deque-based 0-1 BFS finds the best `W` for each parity, and the answer is
+`min(dist[v][even], dist[v][odd] + C)`.
+
+### Q2 - Multi-Source BFS (Voronoi cells)
+All hubs start in one queue at distance 0 (in order `h1..hK`), so a single BFS
+gives every vertex its nearest hub. Hub order in the queue gives the
+smallest-index tie-break for free. Vertices at distance `R` are not expanded,
+so farther vertices keep `owner = -1`.
+
+### Q3 - Bidirectional BFS (Word Ladder)
+The graph is never built. Neighbours of a word are found by changing one letter
+at a time and checking a hash table of the dictionary. Searches from `A` and
+`B` grow level by level (smaller frontier first) and stop when they meet; the
+answer is the number of mutations (edges). `B` not in `D` gives `-1`.
+
+---
+
+## Input formats (vertices are 1-indexed)
+
+| Q | Format |
+|---|--------|
+| 1 | `n m S C` then `m` lines `u v w` (directed edge u→v, weight w ∈ {0,1}) |
+| 2 | `n m K R`, then the `K` hubs `h1 ... hK`, then `m` lines `u v` (undirected) |
+| 3 | `N L`, then `A B`, then the `N` dictionary words |
+
+## Output formats
+
+| Q | Output |
+|---|--------|
+| 1 | Per vertex: minimum cost, or `UNREACHABLE` |
+| 2 | Per vertex: owner hub index and distance (`-1 -1` if outside coverage) |
+| 3 | A single integer: minimum mutations `k`, or `-1` |
+
+## Assumptions
+- Q1: paths may revisit vertices (walks). This is what lets a cycle fix the
+  parity of a path. `Cost(S) = 0` (empty path).
+- Q2: if the same vertex is listed twice as a hub, the smaller index keeps it.
+- Q3: `A` does not have to be in the dictionary; `B` must be.
+- Costs in Q1 are stored in `long long`, so large `C` does not overflow.
+
+## Testing done
+Besides the two sample inputs per question (results in `Outputs/`), each
+program was checked against an independent brute-force solver on several
+hundred random small inputs (Q1: reachability by number of weight-1 edges;
+Q2: separate BFS from every hub; Q3: plain one-directional BFS) with no
+mismatches. Q3 also ran in about 0.02 s on a dictionary of `N = 100000`
+words of length 10.
+## Folder structure
+
+
+## Possible viva questions
+1. **Why does 0-1 BFS need a deque instead of a queue?** Cost-0 edges must be
+   processed before cost-1 edges, so they go to the front.
+2. **Why is Q1 O(V + E) and not O((V + E) log V) like Dijkstra?** Weights are
+   only 0/1, so the deque replaces the priority queue.
+3. **Why does one BFS solve Q2 instead of K BFS runs?** The first wave to
+   reach a vertex comes from its nearest hub.
+4. **How are ties broken in Q2?** Hubs enter the queue in index order and the
+   order is preserved level by level.
+5. **Why is bidirectional BFS faster in Q3?** It explores about `2·b^(k/2)`
+   words rather than `b^k`.
+6. **Why not build the full word graph in Q3?** It could have about `N²`
+   edges; generating `25·L` neighbours per word is much cheaper.
