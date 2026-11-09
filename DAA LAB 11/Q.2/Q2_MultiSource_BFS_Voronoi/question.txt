@@ -1,0 +1,26 @@
+Question 2: [Multi-Source BFS for Radius-Constrained Voronoi Cell Partitioning]
+
+You are given:
+  - An unweighted, undirected graph G = (V, E).
+  - A set of K designated hub vertices H = {h1, h2, ..., hK} subset of V,
+    indexed from 1 to K.
+  - An integer radius threshold R >= 0.
+
+Let dist(u, v) denote the shortest path distance (minimum number of edges)
+between vertices u and v in G.
+
+For every vertex v in V, assign an ownership label owner[v] in {1,...,K} U {-1}
+according to the following rules:
+  1. Distance Metric: Find d_i = dist(v, h_i) for all i in {1..K}.
+     Let d_min(v) = min over i of d_i.
+  2. Reachability Threshold (R): If d_min(v) > R, vertex v lies outside the
+     service coverage area. Set owner[v] = -1.
+  3. Closest Hub Assignment: If d_min(v) <= R, assign v to the hub h_i that
+     minimizes d_i.
+  4. Deterministic Tie-Breaking: If multiple hubs achieve the exact same minimum
+     distance d_min(v), choose the hub with the smallest numerical index i.
+
+Objective: Output the array owner[1..|V|] containing the assigned hub index (or
+-1 if unassigned) and the corresponding shortest distance to that hub for every
+vertex. By choosing the proper input representation, write a program in C to
+validate your algorithm and derive the complexity analysis of your algorithm.
