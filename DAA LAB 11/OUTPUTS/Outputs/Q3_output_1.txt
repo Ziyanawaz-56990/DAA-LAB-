@@ -1,0 +1,7 @@
+=== Q3 : sample 1 ===
+--- input ---
+6 3
+hit cog
+hot dot dog lot log cog
+--- output ---
+4

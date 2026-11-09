@@ -1,0 +1,12 @@
+=== Q1 : sample 2 ===
+--- input ---
+4 3 2 0
+2 3 0
+3 3 1
+4 2 1
+--- output ---
+Vertex  MinCost
+1       UNREACHABLE
+2       0
+3       0
+4       UNREACHABLE
